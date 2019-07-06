@@ -1,0 +1,5 @@
+(define (square x) (* x x))
+(define (sum-two-squares x y)(+ (square x) (square y)))
+(define (square-two-largest-numbers x y z) (cond ((and (>= x z) (>= y z))(sum-two-squares x y))
+                                                 ((and (>= z y) (>= x y))(sum-two-squares z x))
+                                                 (else (sum-two-squares z y))))
